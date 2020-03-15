@@ -23,12 +23,14 @@ import java.net.URL;
 
 public class App {
 
-	// http://localhost:8080/RESTfulExample/json/product/get
+	
 	public static void main(String[] args) {
 
 	  try {
 
 		URL url = new URL("http://34.70.62.138/artifactory/api/storage/libs-snapshot-local/org/jfrog/test/multi1/6.88-SNAPSHOT/multi1-6.88-20190422.230806-1-tests.jar?stats");
+		
+  
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
 		conn.setRequestProperty("Accept", "application/json");
@@ -39,7 +41,7 @@ public class App {
 		}
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(
-			(conn.getInputStream())));
+			(conn.getInputStream()))); 
 
 		String output;
 		System.out.println("Output from Server .... \n");

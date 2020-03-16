@@ -28,8 +28,9 @@ public class App {
 
 	  try {
 
-		URL url = new URL("http://34.70.62.138/artifactory/api/storage/libs-snapshot-local/org/jfrog/test/multi1/6.88-SNAPSHOT/multi1-6.88-20190422.230806-1-tests.jar?stats");
+		//URL url = new URL("http://34.70.62.138/artifactory/api/storage/libs-snapshot-local/org/jfrog/test/multi1/6.88-SNAPSHOT/multi1-6.88-20190422.230806-1-tests.jar?stats");
 		
+		URL url = new URL("http://34.70.62.138/artifactory/api/search/artifact?name=*jar&repos=jcenter-cache");		
   
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
@@ -46,6 +47,9 @@ public class App {
 		String output;
 		System.out.println("Output from Server .... \n");
 		while ((output = br.readLine()) != null) {
+			
+			
+			
 			System.out.println(output);
 		}
 

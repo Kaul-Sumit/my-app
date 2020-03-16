@@ -20,6 +20,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import org.json.simple.JSONObject;
+
+
 
 public class App {
 
@@ -44,14 +47,20 @@ public class App {
 		BufferedReader br = new BufferedReader(new InputStreamReader(
 			(conn.getInputStream()))); 
 
-		String output;
+		Object output;
+		
+		//JSONObject jsonObject = (JSONObject) output;
 		System.out.println("Output from Server .... \n");
 		while ((output = br.readLine()) != null) {
-			
-			
-			
+				
 			System.out.println(output);
 		}
+		
+		
+		
+		
+		
+		
 
 		conn.disconnect();
 

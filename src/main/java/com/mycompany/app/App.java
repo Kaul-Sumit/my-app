@@ -55,13 +55,7 @@ public class App {
 				
 			System.out.println(output);
 		}
-		
-		
-		
-		
-		
-		
-
+	
 		conn.disconnect();
 
 	  } catch (MalformedURLException e) {
